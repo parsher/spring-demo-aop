@@ -20,8 +20,12 @@ public class MainDemoApp {
 		// call the business method
 		theAccountDAO.addAccount(new Account(), true);
 		
+		theAccountDAO.work();
+		
 		// call the business method 
 		theMembershipDAO.addAccount();
+		
+		theMembershipDAO.goToSleep();
 
 		// close the context
 		context.close();
