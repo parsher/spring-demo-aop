@@ -12,7 +12,8 @@ public class MyDemoLoggingAspect {
 	
 	// let's start with and @Before advice
 	
-	@Before("execution(* add*(com.luv2code.aopdemo.Account))")
+	// .. : mat on any number of arguments > 0 to many
+	@Before("execution(* add*(com.luv2code.aopdemo.Account, ..))")
 	public void beforeAddAccountAdvice() {
 		
 		System.out.println("\n====> Executing @Before advice on addAccount()");
